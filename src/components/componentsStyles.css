@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+  font-family: 'Montserrat';
+  width: 620px;
+  margin: auto;
+  background-color: rgb(200, 250, 200);
+  padding: 20px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  width: 580px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 110, 255);
+  padding: 10px 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 24px;
+  color: #fff;
+  transition: 0.5s;
+  align-items: center;
+}
+
+.list li:hover {
+  transform: scale(1.04);
+}
+
+.listText {
+  width: 510px;
+  text-align: center;
+}
+
+.mainInput {
+  width: 487px;
+  height: 45px;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+.addBtn {
+  width: 80px;
+  height: 45px;
+  margin-left: 13px;
+  border: 0;
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 600;
+}
+
+.checkbox {
+  width: 30px;
+  height: 30px;
+}
+
+.delBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0;
+  background-color: red;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.todosBlock {
+  margin-top: 30px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.inputBlock {
+  margin-top: 60px;
+}
