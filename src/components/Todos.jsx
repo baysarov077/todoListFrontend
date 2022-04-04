@@ -1,47 +1,21 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteTodo, patchTodo } from '../redux/todos';
+import Todo from './Todo';
 import image from './img/buc.png'
+import { useSelector } from 'react-redux';
 
 const Todos = () => {
 
-  const dispatch = useDispatch()
   const todos = useSelector(state => state.todos)
-
-  const handleDeleteTodo = (id) => {
-    dispatch(deleteTodo(id))
-  }
-
-  const handlePatchTodo = (id, completed) => {
-    dispatch(patchTodo(id, completed))
-  }
-
-  const loading = useSelector(state => state.loading)
 
   return (
     <>
-      {loading ? <div>...идет загрузка</div> :
-      <div>
-        <h1 style={{color: 'blue'}}>Всего дел: {todos.length}</h1>
-      <ul className='list'>
-        {todos.map(item => {
-          return (
-            <li className={item.completed ? 'completed' : 'listItem'} key={item._id}>
-              <input
-                className='checkbox'
-                type="checkbox"
-                onChange={() => handlePatchTodo(item._id, item.completed)}
-                checked={item.completed} />
-              <div className='listText'>{item.text}</div>
-              <div onClick={() => handleDeleteTodo(item._id)}><img style={{width: '30px'}} src={image} alt="" /></div>
-              </li>
-          )
-        })}
-      </ul>
-    </div>
-    }
+      <h1 style={{ color: 'blue' }}>Всего дел: {todos.length}</h1>
+      {todos.map(item => {
+        return <Todo key={item._id} img={image} text={item.text} completed={item.completed} id={item._id} />
+      })}
     </>
   );
 };
+
 
 export default Todos;

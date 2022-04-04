@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addTodos } from '../redux/todos';
 
+
 const Input = () => {
 
   const dispatch = useDispatch()
@@ -32,4 +33,6 @@ const Input = () => {
   );
 };
 
+
 export default Input;
+

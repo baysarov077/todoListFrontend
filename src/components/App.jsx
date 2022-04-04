@@ -14,16 +14,16 @@ const App = () => {
   }, [dispatch])
   return (
     <>
-    {loading ? <div>...идет загрузка</div> :
-    <div className='container'>
-      <div className='todosBlock'>
-      <Todos />
-      </div>
-      <div className='inputBlock'>
-      <Input />
-      </div>
-    </div>
-  }
+      {loading ? <div>...идет загрузка</div> :
+        <div className='container'>
+          <div className='todosBlock'>
+            <Todos />
+          </div>
+          <div className='inputBlock'>
+            <Input />
+          </div>
+        </div>
+      }
     </>
   );
 };
